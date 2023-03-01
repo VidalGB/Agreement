@@ -54,26 +54,61 @@ This is a guide to the popularly established convention in python, to standardiz
 
 {Color.underline}Non-public methods and variables{Color.end}
 
-- Protected variables or functions -> dash prefix under {Color.bold}"_"{Color.end}
+- Protected variables or functions -> dash prefix under {Color.purple}"_"{Color.end}
 
 {Color.red}example:{Color.end}
   class MyClass: 
-      _name = "Name"
+      {Color.purple}_{Color.end}name = "Name"
 
-      def _print(self):
-        print(self._name)
+      def {Color.purple}_{Color.end}print(self):
+        print(self.{Color.purple}_{Color.end}name)
 
-- Private variables or functions -> double hyphen prefix under {Color.bold}"__"{Color.end}
+- Private variables or functions -> double hyphen prefix under {Color.blue}"__"{Color.end}
 
 {Color.red}example:{Color.end}
   class MyClass: 
-      __number = 4
+      {Color.blue}__{Color.end}number = 4
 
-{Color.underline}Arguments of functions and methods{Color.end}
+{Color.underline}Arguments of functions and methods{Color.end}:
 
-- 1st arg -> self
+- 1st arg of functions -> {Color.green}self{Color.end}
 
-- 1st arg -> cls
-"""
+{Color.red}example:{Color.end}
+  class MyClass():
+      def __init__({Color.green}self{Color.end}):
+        {Color.green}self{Color.end}.name = "Hello"
+
+      def my_func({Color.green}self{Color.end}):
+          print({Color.green}self{Color.end}.name)
+
+- 1st arg of methods -> {Color.cyan}cls{Color.end}
+
+{Color.red}example:{Color.end}
+  class MyClass():
+      @classmethod
+      def my_func({Color.cyan}cls{Color.end}):
+          return
+
+{Color.underline}Passing arguments{Color.end}:
+
+- Non-Keyword Arguments -> *{Color.purple}args{Color.end}
+
+{Color.red}example:{Color.end}
+  def my_func(*{Color.purple}args{Color.end}):
+      for arg in {Color.purple}args{Color.end}:
+          print(arg)
+  
+  my_func('Hello', 'Word')
+
+- Keyword Arguments -> **{Color.blue}kwargs{Color.end}
+
+{Color.red}example:{Color.end}
+  def my_func(**{Color.blue}kwargs{Color.end}):
+      for key, value in {Color.blue}kwargs{Color.end}.items():
+          print("%s == %s" % (key, value))
+  
+  my_func(first='1', mid='2', last='3')
+
+ """
 
 print(text)
