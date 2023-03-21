@@ -16,6 +16,7 @@ This is a guide to the popularly established convention in python, to standardiz
 {Color.red}IMPORTANT:{Color.end} It is neither mandatory nor necessary to follow these examples, each programmer chooses his own programming style.
 
 {Color.underline}Types of syntax{Color.end}:
+
 - {Color.cyan}lowerCamelCase{Color.end} -> {Color.red}example:{Color.end} helloWord
 
 - {Color.green}UpperCamelCase{Color.end} -> {Color.red}example:{Color.end} HelloWord
@@ -24,35 +25,36 @@ This is a guide to the popularly established convention in python, to standardiz
 
 - {Color.purple}SCREAMING_SNAKE_CASE{Color.end} -> {Color.red}example:{Color.end} HELLO_WORD
 
-{Color.underline}Types of syntax{Color.end}:
-{Color.underline}Class{Color.end} -> {Color.green}UpperCamelCase{Color.end}
+{Color.underline}Syntax of elements{Color.end}:
+
+- Class -> {Color.green}UpperCamelCase{Color.end}
 
 {Color.red}example:{Color.end}
-  class MyClass():
+  class {Color.green}MyClass{Color.end}():
       pass
 
-{Color.underline}Exceptions{Color.end} -> {Color.green}UpperCamelCase{Color.end}
+- Exceptions -> {Color.green}UpperCamelCase{Color.end}
 
 {Color.red}example:{Color.end}
   try:
       pass
-  except SyntaxError:
+  except {Color.green}SyntaxError{Color.end}:
       pass
 
-{Color.underline}Functions{Color.end} and {Color.underline}variables{Color.end} -> {Color.blue}snake_case{Color.end}
+- Functions and variables -> {Color.blue}snake_case{Color.end}
 
 {Color.red}example:{Color.end}
-  code = 'Python'
+  {Color.blue}code{Color.end} = 'Python'
 
-  def my_functions():
+  def {Color.blue}my_func{Color.end}():
       pass
 
-{Color.underline}Constants{Color.end} -> {Color.purple}SCREAMING_SNAKE_CASE{Color.end}
+- Constants -> {Color.purple}SCREAMING_SNAKE_CASE{Color.end}
 
 {Color.red}example:{Color.end}
-  CONST_NAME = 'Name'
+  {Color.purple}CONST_NAME{Color.end} = 'Name'
 
-{Color.underline}Non-public methods and variables{Color.end}
+{Color.underline}Non-public methods and variables{Color.end}:
 
 - Protected variables or functions -> dash prefix under {Color.purple}"_"{Color.end}
 
