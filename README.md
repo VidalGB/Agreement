@@ -17,4 +17,4 @@ The module was developed by **@VidalGB**
 # License
 Agreement is released under the [MIT].
 
-[MIT]: https://github.com/VidalGB/Agreement/LICENSE
+[MIT]: https://github.com/VidalGB/Agreement/blob/master/LICENSE
